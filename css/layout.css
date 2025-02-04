@@ -1,0 +1,244 @@
+/* --- Base CSS --- */
+
+/* Réinitialisation de quelques éléments par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Police globale */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* --- Header --- */
+
+header {
+    background-color: #343a40;
+    /* Couleur sombre pour le header */
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* --- Sidebar --- */
+
+.sidebar {
+    background-color: #fff;
+    /* Fond blanc */
+    padding: 15px;
+    /* Espacement intérieur */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombre subtile */
+    height: 100%;
+    position: sticky;
+    top: 0;
+    width: 200px;
+    /* Largeur définie pour la sidebar */
+    overflow: hidden;
+    /* Pour éviter les débordements */
+}
+
+.sidebar h4 {
+    font-weight: bold;
+    color: #d4af37;
+    /* Couleur or */
+    margin-bottom: 20px;
+}
+
+.sidebar .category-link {
+    display: block;
+    color: #343a40;
+    /* Texte sombre */
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    /* Transition fluide pour l'effet de survol */
+}
+
+.sidebar .category-link:hover {
+    background-color: #f1f1f1;
+    /* Fond plus clair au survol */
+    color: #d4af37;
+    /* Changement de couleur au survol */
+}
+
+/* --- Main Content --- */
+
+/* Pour s'assurer que le contenu principal n'empiète pas sur la sidebar */
+main {
+    /* Ajout d'une marge pour laisser de l'espace à la sidebar */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #d4af37;
+    /* Couleur or pour les titres */
+    margin-bottom: 20px;
+}
+
+/* --- Cartes (Products) --- */
+
+.card {
+    border: none;
+    border-radius: 8px;
+    /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Agrandissement léger au survol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* Ombre renforcée au survol */
+}
+
+.card-img-top {
+    border-radius: 8px 8px 0 0;
+    /* Coins arrondis sur le haut des cartes */
+    height: 200px;
+    object-fit: cover;
+    /* Assure que l'image couvre bien l'espace sans déformation */
+}
+
+.card-body {
+    padding: 15px;
+
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 50px;
+    /* Hauteur fixe adaptée */
+    line-height: 1.2;
+    /* Espacement entre les lignes */
+    overflow: hidden;
+    /* Cache le texte dépassant la hauteur */
+    text-align: center;
+    /* Aligne le texte au centre */
+    display: flex;
+    /* Pour centrer verticalement */
+    justify-content: center;
+    /* Centrer horizontalement */
+    align-items: center;
+    /* Centrer verticalement */
+}
+
+.card-text {
+    color: #d4af37;
+    /* Couleur or pour le prix */
+    font-size: 1rem;
+}
+
+/* --- Boutons --- */
+
+.btn-gold {
+    background-color: #d4af37;
+    color: #fff;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #b8902e;
+    /* Changement de couleur au survol */
+}
+
+/* --- Footer --- */
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* --- Responsive Design --- */
+
+/* Pour les écrans de taille moyenne et petite (tablettes et mobiles) */
+@media (max-width: 1024px) {
+    .container {
+        margin-top: 20px;
+        /* Espacement sur les écrans plus petits */
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    .sidebar h4 {
+        font-size: 1.5rem;
+    }
+
+    .category-link {
+        padding: 10px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-img-top {
+        height: 180px;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    .btn-gold {
+        padding: 10px;
+    }
+}
+
+/* Pour les écrans très petits (mobiles) */
+@media (max-width: 767px) {
+    .container {
+        margin-top: 10px;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+
+    .category-link {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .card-img-top {
+        height: 160px;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .btn-gold {
+        padding: 8px;
+    }
+}
